@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/thunderdragonfc/static/css/main.33e84560.css",
-    "main.js": "/thunderdragonfc/static/js/main.31462bee.js",
+    "main.js": "/thunderdragonfc/static/js/main.450b1e66.js",
     "static/media/Player20.JPG": "/thunderdragonfc/static/media/Player20.298a7b7ced4ee8e115c0.JPG",
     "static/media/Player8.JPG": "/thunderdragonfc/static/media/Player8.a2173787d821dfdab91e.JPG",
     "static/media/Player12.JPG": "/thunderdragonfc/static/media/Player12.aa7f4ab7cff54a29273f.JPG",
@@ -40,10 +40,10 @@
     "static/media/ZimbabweFC.png": "/thunderdragonfc/static/media/ZimbabweFC.47a0a1b74ace5bd5f702.png",
     "index.html": "/thunderdragonfc/index.html",
     "main.33e84560.css.map": "/thunderdragonfc/static/css/main.33e84560.css.map",
-    "main.31462bee.js.map": "/thunderdragonfc/static/js/main.31462bee.js.map"
+    "main.450b1e66.js.map": "/thunderdragonfc/static/js/main.450b1e66.js.map"
   },
   "entrypoints": [
     "static/css/main.33e84560.css",
-    "static/js/main.31462bee.js"
+    "static/js/main.450b1e66.js"
   ]
 }
