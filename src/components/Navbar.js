@@ -5,9 +5,16 @@ import ThunderDragonLogo from '../Images/ThunderDragonFC.jpg';
 
 function Navbar() {
   const location = useLocation();
+  const [expanded, setExpanded] = React.useState(false);
 
   return (
-    <BootstrapNavbar bg="dark" variant="dark" expand="lg" sticky="top">
+    <BootstrapNavbar
+      bg="dark"
+      variant="dark"
+      expand="lg"
+      sticky="top"
+      expanded={expanded}
+    >
       <Container>
         <BootstrapNavbar.Brand as={Link} to="/">
           <img
@@ -18,22 +25,50 @@ function Navbar() {
           />
           Thunder Dragon FC
         </BootstrapNavbar.Brand>
-        <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
+        <BootstrapNavbar.Toggle
+          aria-controls="basic-navbar-nav"
+          onClick={() => setExpanded(prev => !prev)}
+        />
         <BootstrapNavbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/" active={location.pathname === '/'}>
+            <Nav.Link
+              as={Link}
+              to="/"
+              active={location.pathname === '/'}
+              onClick={() => setExpanded(false)}
+            >
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="/team" active={location.pathname === '/team'}>
+            <Nav.Link
+              as={Link}
+              to="/team"
+              active={location.pathname === '/team'}
+              onClick={() => setExpanded(false)}
+            >
               Team
             </Nav.Link>
-            <Nav.Link as={Link} to="/matches" active={location.pathname === '/matches'}>
+            <Nav.Link
+              as={Link}
+              to="/matches"
+              active={location.pathname === '/matches'}
+              onClick={() => setExpanded(false)}
+            >
               Matches
             </Nav.Link>
-            <Nav.Link as={Link} to="/sponsorship" active={location.pathname === '/sponsorship'}>
+            <Nav.Link
+              as={Link}
+              to="/sponsorship"
+              active={location.pathname === '/sponsorship'}
+              onClick={() => setExpanded(false)}
+            >
               Sponsorship
             </Nav.Link>
-            <Nav.Link as={Link} to="/contact" active={location.pathname === '/contact'}>
+            <Nav.Link
+              as={Link}
+              to="/contact"
+              active={location.pathname === '/contact'}
+              onClick={() => setExpanded(false)}
+            >
               Contact
             </Nav.Link>
           </Nav>
