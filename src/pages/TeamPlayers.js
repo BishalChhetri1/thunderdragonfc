@@ -6,11 +6,11 @@ import { players } from '../data/players';
 function TeamPlayers() {
   return (
     <div className="min-vh-content">
-      <section className="page-section">
+      <section className="page-section team-section">
         <Container>
           <h1 className="section-title">Our Team</h1>
           <p className="text-center text-muted mb-5">
-            Meet the talented players who make Thunder Dragon FC great
+            First team squad of Thunder Dragon FC.
           </p>
           <Row>
             {players.map(player => (

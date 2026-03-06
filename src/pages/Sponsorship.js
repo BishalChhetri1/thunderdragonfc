@@ -4,13 +4,9 @@ import { Link } from 'react-router-dom';
 import { sponsors } from '../data/sponsors';
 
 function Sponsorship() {
-  const goldSponsors = sponsors.filter(s => s.tier === 'Gold');
-  const silverSponsors = sponsors.filter(s => s.tier === 'Silver');
-  const bronzeSponsors = sponsors.filter(s => s.tier === 'Bronze');
-
   return (
     <div className="min-vh-content">
-      <section className="page-section">
+      <section className="page-section sponsorship-section">
         <Container>
           <h1 className="section-title">Sponsorship</h1>
           
@@ -46,66 +42,33 @@ function Sponsorship() {
 
           {/* Current Sponsors */}
           <h2 className="section-title">Our Sponsors</h2>
-          
-          {goldSponsors.length > 0 && (
-            <div className="mb-5">
-              <h3 className="text-center mb-4">
-                <span className="badge bg-warning text-dark p-2">Gold Sponsors</span>
-              </h3>
-              <Row>
-                {goldSponsors.map(sponsor => (
-                  <Col md={6} key={sponsor.id} className="mb-4">
-                    <Card>
-                      <Card.Body>
-                        <Card.Title>{sponsor.name}</Card.Title>
-                        <Card.Text>{sponsor.description}</Card.Text>
-                      </Card.Body>
-                    </Card>
-                  </Col>
-                ))}
-              </Row>
-            </div>
-          )}
 
-          {silverSponsors.length > 0 && (
-            <div className="mb-5">
-              <h3 className="text-center mb-4">
-                <span className="badge bg-secondary p-2">Silver Sponsors</span>
-              </h3>
-              <Row>
-                {silverSponsors.map(sponsor => (
-                  <Col md={6} key={sponsor.id} className="mb-4">
-                    <Card>
-                      <Card.Body>
-                        <Card.Title>{sponsor.name}</Card.Title>
-                        <Card.Text>{sponsor.description}</Card.Text>
-                      </Card.Body>
-                    </Card>
+          {sponsors.map(sponsor => (
+            <div key={sponsor.id} className="sponsor-card-wrapper">
+              <Card className="shadow-sm border-0 sponsor-card">
+                <Row className="g-0 align-items-center">
+                  {sponsor.logo && (
+                    <Col md={4} className="text-center p-4">
+                      <div className="sponsor-logo-wrapper">
+                        <img
+                          src={sponsor.logo}
+                          alt={sponsor.name}
+                          className="img-fluid sponsor-logo"
+                        />
+                      </div>
+                    </Col>
+                  )}
+                  <Col md={sponsor.logo ? 8 : 12}>
+                    <Card.Body className="p-4">
+                      <span className="sponsor-badge">Official Sponsor</span>
+                      <Card.Title className="h4 mb-3">{sponsor.name}</Card.Title>
+                      <Card.Text>{sponsor.description}</Card.Text>
+                    </Card.Body>
                   </Col>
-                ))}
-              </Row>
+                </Row>
+              </Card>
             </div>
-          )}
-
-          {bronzeSponsors.length > 0 && (
-            <div className="mb-5">
-              <h3 className="text-center mb-4">
-                <span className="badge bg-dark p-2">Bronze Sponsors</span>
-              </h3>
-              <Row>
-                {bronzeSponsors.map(sponsor => (
-                  <Col md={4} key={sponsor.id} className="mb-4">
-                    <Card>
-                      <Card.Body>
-                        <Card.Title>{sponsor.name}</Card.Title>
-                        <Card.Text className="small">{sponsor.description}</Card.Text>
-                      </Card.Body>
-                    </Card>
-                  </Col>
-                ))}
-              </Row>
-            </div>
-          )}
+          ))}
 
           {sponsors.length === 0 && (
             <div className="text-center py-5">

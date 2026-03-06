@@ -14,8 +14,12 @@ function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="hero-section">
-        <Container>
+      <section
+        className="hero-section"
+        style={{ backgroundImage: `url(${TeamPhoto2})` }}
+      >
+        <div className="hero-overlay" />
+        <Container className="hero-content">
           <h1>Thunder Dragon FC</h1>
           <p>Passion. Pride. Performance.</p>
           <div>

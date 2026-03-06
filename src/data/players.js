@@ -9,13 +9,10 @@ import Player9 from '../Images/Player9.JPG';
 import Player11 from '../Images/Player11.JPG';
 import Player12 from '../Images/Player12.JPG';
 import Player13 from '../Images/Player13.JPG';
-import Player14 from '../Images/Player14.jpg';
+import Player14 from '../Images/Player14.JPG';
 import Player16 from '../Images/Player16.jpeg';
 import Player17 from '../Images/Player17.jpg';
 import Player20 from '../Images/Player20.JPG';
-import Player21 from '../Images/Player21.jpg';
-import Player25 from '../Images/Player25.jpg';
-import Player80 from '../Images/Player80.JPG';
 
 export const players = [
   {
@@ -108,10 +105,10 @@ export const players = [
   },
   {
     id: 12,
-    name: 'Narayan Dhimal',
+    name: 'Bebash Gurung',
     position: 'Defender',
     number: 14,
-    bio: 'Versatile defender who can play multiple positions in the backline.',
+    bio: 'Reliable defender with good positioning and defensive instincts.',
     image: Player14
   },
   {
@@ -132,34 +129,10 @@ export const players = [
   },
   {
     id: 15,
-    name: 'Ghana Koirala',
-    position: 'Forward',
+    name: 'Bhu Whan',
+    position: 'Midfielder',
     number: 20,
-    bio: 'Clinical striker with a natural eye for goal.',
+    bio: 'Experienced midfielder with skills and passing ability.',
     image: Player20
   },
-  {
-    id: 16,
-    name: 'Bhanu Regmi',
-    position: 'Forward',
-    number: 21,
-    bio: 'Energetic forward with good ball control and finishing ability.',
-    image: Player21
-  },
-  {
-    id: 17,
-    name: 'Preshon Luiyel',
-    position: 'Defender',
-    number: 25,
-    bio: 'Young talent with great potential and defensive skills.',
-    image: Player25
-  },
-  {
-    id: 18,
-    name: 'Bebash Gurung',
-    position: 'Defender',
-    number: 80,
-    bio: 'Reliable defender with good positioning and defensive instincts.',
-    image: Player80
-  }
 ];

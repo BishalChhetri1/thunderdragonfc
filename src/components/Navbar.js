@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Navbar as BootstrapNavbar, Nav, Container } from 'react-bootstrap';
+import ThunderDragonLogo from '../Images/ThunderDragonFC.jpg';
 
 function Navbar() {
   const location = useLocation();
@@ -9,7 +10,13 @@ function Navbar() {
     <BootstrapNavbar bg="dark" variant="dark" expand="lg" sticky="top">
       <Container>
         <BootstrapNavbar.Brand as={Link} to="/">
-          ⚽ Thunder Dragon FC
+          <img
+            src={ThunderDragonLogo}
+            alt="Thunder Dragon FC Logo"
+            className="me-2"
+            style={{ height: '36px', width: '36px', objectFit: 'cover', borderRadius: '50%' }}
+          />
+          Thunder Dragon FC
         </BootstrapNavbar.Brand>
         <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
         <BootstrapNavbar.Collapse id="basic-navbar-nav">
@@ -18,7 +25,7 @@ function Navbar() {
               Home
             </Nav.Link>
             <Nav.Link as={Link} to="/team" active={location.pathname === '/team'}>
-              Team Players
+              Team
             </Nav.Link>
             <Nav.Link as={Link} to="/matches" active={location.pathname === '/matches'}>
               Matches

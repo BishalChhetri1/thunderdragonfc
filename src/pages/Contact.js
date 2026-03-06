@@ -33,16 +33,16 @@ function Contact() {
 
   return (
     <div className="min-vh-content">
-      <section className="page-section">
+      <section className="page-section contact-section">
         <Container>
           <h1 className="section-title">Contact Us</h1>
-          
-          <Row>
+
+          <Row className="align-items-stretch">
             <Col md={8} className="mb-4">
-              <Card>
+              <Card className="contact-main-card">
                 <Card.Body className="p-4">
                   <Card.Title className="h3 mb-4">Send us a Message</Card.Title>
-                  
+
                   {showAlert && (
                     <Alert variant="success" dismissible onClose={() => setShowAlert(false)}>
                       Thank you for your message! We'll get back to you soon.
@@ -108,12 +108,12 @@ function Contact() {
             </Col>
 
             <Col md={4}>
-              <Card className="mb-4">
+              <Card className="mb-4 contact-side-card">
                 <Card.Body>
                   <Card.Title className="h5 mb-3">Contact Information</Card.Title>
                   <Card.Text>
                     <strong>Email:</strong><br />
-                    <a href="mailto:chhetrimessi1011@gmail.com">thunderdragonfc2020@gmail.com</a>
+                    <a href="mailto:chhetrimessi1011@gmail.com">Thunderdragonfootballclub@gmail.com</a>
                   </Card.Text>
                   <Card.Text>
                     <strong>Phone:</strong><br />
@@ -127,7 +127,7 @@ function Contact() {
                 </Card.Body>
               </Card>
 
-              <Card>
+              <Card className="contact-side-card">
                 <Card.Body>
                   <Card.Title className="h5 mb-3">Follow Us</Card.Title>
                   <Card.Text>
@@ -140,7 +140,7 @@ function Contact() {
                 </Card.Body>
               </Card>
 
-              <Card className="mt-4">
+              <Card className="mt-4 contact-side-card">
                 <Card.Body>
                   <Card.Title className="h5 mb-3">Training Schedule</Card.Title>
                   <Card.Text>
