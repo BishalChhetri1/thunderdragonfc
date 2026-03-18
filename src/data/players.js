@@ -132,7 +132,7 @@ export const players = [
     name: 'Bhu Whan',
     position: 'Midfielder',
     number: 20,
-    bio: 'Experienced midfielder with skills and passing ability.',
+    bio: 'Experienced midfielder with skills and passing ability.', 
     image: Player20
   },
 ];
