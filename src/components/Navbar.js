@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Navbar as BootstrapNavbar, Nav, Container } from 'react-bootstrap';
-import ThunderDragonLogo from '../Images/ThunderDragonFC.jpg';
+import headerLogo from '../Images/headerlogo.jpg';
 
 function Navbar() {
   const location = useLocation();
@@ -18,7 +18,7 @@ function Navbar() {
       <Container>
         <BootstrapNavbar.Brand as={Link} to="/">
           <img
-            src={ThunderDragonLogo}
+            src={headerLogo}
             alt="Thunder Dragon FC Logo"
             className="me-2"
             style={{ height: '36px', width: '36px', objectFit: 'cover', borderRadius: '50%' }}
