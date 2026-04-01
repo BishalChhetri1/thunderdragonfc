@@ -34,11 +34,9 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.65),
-    rgba(0, 0, 0, 0.45)
-  );
+  background: linear-gradient(135deg,
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.45));
 }
 
 .hero-content {
@@ -118,6 +116,108 @@ body {
 
 .match-card {
   margin-bottom: 1.5rem;
+}
+
+.fixture-teams {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.fixture-team {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.fixture-team-logo,
+.fixture-team-logo-placeholder {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.fixture-team-logo-placeholder {
+  background: #e0e0e0;
+}
+
+.fixture-team-name {
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.fixture-name-short,
+.fixture-name-abbr {
+  display: none;
+}
+
+.fixture-vs {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .next-fixture-body {
+    padding: 1.5rem !important;
+  }
+
+  .fixture-teams {
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+  }
+
+  .fixture-team {
+    gap: 0.5rem;
+    min-width: 0;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .fixture-team-logo,
+  .fixture-team-logo-placeholder {
+    width: 34px;
+    height: 34px;
+  }
+
+  .fixture-team-name {
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .fixture-vs {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    margin: 0 0.25rem;
+  }
+
+  .fixture-name-full {
+    display: none;
+  }
+
+  .fixture-name-short {
+    display: inline;
+  }
+}
+
+@media (max-width: 420px) {
+  .fixture-name-short {
+    display: none;
+  }
+
+  .fixture-name-abbr {
+    display: inline;
+  }
 }
 
 .sponsor-logo {
@@ -427,7 +527,16 @@ body {
     width: 100%;
     margin: 0;
     text-align: left;
-    padding-left: 2.5rem;
+    padding-left: 0;
+  }
+
+  .match-score::before {
+    content: attr(data-label) ": ";
+    font-weight: 700;
+  }
+
+  .match-score[data-label="Time"] {
+    padding-left: 0;
   }
 
   .match-details {

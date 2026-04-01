@@ -12,8 +12,58 @@ import RoyaleLogo from '../Images/RoyaleFC.jpg';
 import MTUCROCSLogo from '../Images/MtuCrocs.png';
 import HimalayanLogo from '../Images/HimalayanFC.jpg';
 import UnitedLogo from '../Images/UnitedFC.jpg';
+import PalestinaLogo from '../Images/PalestinaFC.png';
 
 export const matches = [
+  // MCSA Silicon Stack Premier League 2026 (Upcoming Fixtures)
+  {
+    id: 22,
+    date: '2026-04-12',
+    time: '3:00 pm',
+    opponent: 'Palestina FC',
+    venue: 'RMIT Sports Centre',
+    type: 'upcoming',
+    score: '',
+    result: '',
+    league: 'MCSA Silicon Stack Premier League 2026',
+    opponentLogo: PalestinaLogo
+  },
+  {
+    id: 23,
+    date: '2026-04-19',
+    time: '3:00 pm',
+    opponent: 'MTU CROCS',
+    venue: 'Darebin International Sports Centre',
+    type: 'upcoming',
+    score: '',
+    result: '',
+    league: 'MCSA Silicon Stack Premier League 2026',
+    opponentLogo: MTUCROCSLogo
+  },
+  {
+    id: 24,
+    date: '2026-04-26',
+    time: '1:00 pm',
+    opponent: 'Himalayan FC',
+    venue: 'RMIT Sports Centre',
+    type: 'upcoming',
+    score: '',
+    result: '',
+    league: 'MCSA Silicon Stack Premier League 2026',
+    opponentLogo: HimalayanLogo
+  },
+  {
+    id: 25,
+    date: '2026-05-03',
+    time: '1:00 pm',
+    opponent: 'Royale FC',
+    venue: 'RMIT Sports Centre',
+    type: 'upcoming',
+    score: '',
+    result: '',
+    league: 'MCSA Silicon Stack Premier League 2026',
+    opponentLogo: RoyaleLogo
+  },
   // Champion Showdown 2025 - 14 December 2025
   {
     id: 1,

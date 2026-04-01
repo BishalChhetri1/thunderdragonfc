@@ -18,6 +18,7 @@ function Matches() {
 
   // Define league order
   const leagueOrder = [
+    'MCSA Silicon Stack Premier League 2026',
     'Championship Showdown 2025',
     '12th Interstate Bhutanese Interstate',
     'MCSA Silicon Stack Premier League 2025'
@@ -29,6 +30,21 @@ function Matches() {
       day: 'numeric',
       year: 'numeric'
     });
+  };
+
+  const getCenterDisplay = (match) => {
+    if (match.type === 'upcoming') return match.time;
+    return match.score;
+  };
+
+  const getCenterLabel = (match) => {
+    if (match.type === 'upcoming') return 'Time';
+    return 'Score';
+  };
+
+  const getStatusBadge = (match) => {
+    if (match.type === 'upcoming') return 'KO';
+    return 'FT';
   };
 
   return (
@@ -56,7 +72,7 @@ function Matches() {
                       {leagueMatches.map(match => (
                         <div key={match.id} className="match-item">
                           <div className="match-status">
-                            <span className="status-badge">FT</span>
+                            <span className="status-badge">{getStatusBadge(match)}</span>
                           </div>
                           <div className="match-content">
                             <div className="match-teams">
@@ -68,7 +84,9 @@ function Matches() {
                                 />
                                 <span className="team-name">Thunder Dragon FC</span>
                               </div>
-                              <span className="match-score">{match.score}</span>
+                              <span className="match-score" data-label={getCenterLabel(match)}>
+                                {getCenterDisplay(match)}
+                              </span>
                               <div className="team-container">
                                 {match.opponentLogo ? (
                                   <img
@@ -84,9 +102,13 @@ function Matches() {
                             </div>
                             <div className="match-details">
                               <span className="match-date">{formatDate(match.date)}</span>
-                              <span className={`result-badge ${match.result === 'Win' ? 'win' : match.result === 'Draw' ? 'draw' : 'loss'}`}>
-                                {match.result}
-                              </span>
+                              {match.type === 'past' && (
+                                <span
+                                  className={`result-badge ${match.result === 'Win' ? 'win' : match.result === 'Draw' ? 'draw' : 'loss'}`}
+                                >
+                                  {match.result}
+                                </span>
+                              )}
                             </div>
                           </div>
                         </div>

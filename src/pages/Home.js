@@ -6,10 +6,17 @@ import TeamPhoto1 from '../Images/TeamPhoto1.jpg';
 import TeamPhoto2 from '../Images/TeamPhoto2.jpg';
 import TeamPhoto3 from '../Images/TeamPhoto3.jpg';
 import TeamPhoto4 from '../Images/TeamPhoto4.jpg';
+import ThunderDragonLogo from '../Images/ThunderDragonFC.jpg';
 
 function Home() {
-  const upcomingMatch = matches.find(match => match.type === 'upcoming');
-  const recentMatches = matches.filter(match => match.type === 'past').slice(0, 3);
+  const upcomingMatch = [...matches]
+    .filter(match => match.type === 'upcoming')
+    .sort((a, b) => new Date(a.date) - new Date(b.date))[0];
+
+  const recentMatches = [...matches]
+    .filter(match => match.type === 'past')
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 3);
 
   return (
     <div>
@@ -37,12 +44,36 @@ function Home() {
       {upcomingMatch && (
         <section className="page-section bg-light">
           <Container>
-            <h2 className="section-title">Next Match</h2>
+            <h2 className="section-title">Next Fixture</h2>
             <Row className="justify-content-center">
               <Col md={8}>
                 <Card className="text-center">
-                  <Card.Body className="p-5">
-                    <Card.Title className="h3 mb-4">vs {upcomingMatch.opponent}</Card.Title>
+                  <Card.Body className="p-5 next-fixture-body">
+                    <div className="fixture-teams mb-4">
+                      <div className="fixture-team">
+                        <img
+                          src={ThunderDragonLogo}
+                          alt="Thunder Dragon FC"
+                          className="fixture-team-logo"
+                        />
+                        <span className="fixture-team-name fixture-name-full">Thunder Dragon FC</span>
+                        <span className="fixture-team-name fixture-name-short">Thunder Dragon</span>
+                        <span className="fixture-team-name fixture-name-abbr">TDFC</span>
+                      </div>
+                      <span className="fixture-vs">vs</span>
+                      <div className="fixture-team">
+                        {upcomingMatch.opponentLogo ? (
+                          <img
+                            src={upcomingMatch.opponentLogo}
+                            alt={upcomingMatch.opponent}
+                            className="fixture-team-logo"
+                          />
+                        ) : (
+                          <div className="fixture-team-logo-placeholder" />
+                        )}
+                        <span className="fixture-team-name">{upcomingMatch.opponent}</span>
+                      </div>
+                    </div>
                     <Card.Text className="h5 text-muted mb-3">
                       {new Date(upcomingMatch.date).toLocaleDateString('en-US', {
                         weekday: 'long',
