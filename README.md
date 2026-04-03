@@ -57,10 +57,10 @@ src/
 
 ## Customization
 
-You can customize the team data by editing the files in `src/data/`:
-- `players.js` - Add or modify player information
-- `matches.js` - Update match schedules and results
-- `sponsors.js` - Manage sponsor information
+Data files in `src/data/`:
+- `players.js` - Player information
+- `matches.js` - Match schedules and results
+- `sponsors.js` - Sponsor information
 
 ## Note
 
