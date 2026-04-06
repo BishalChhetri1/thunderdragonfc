@@ -33,8 +33,8 @@ function Home() {
           <p className="hero-text mb-4">
             Building a competitive, disciplined, and united football culture with pride in every training session and every matchday.
           </p>
-          <div>
-            <Button as={Link} to="/team" variant="warning" size="lg" className="me-3 fw-bold">
+          <div className="hero-cta-buttons">
+            <Button as={Link} to="/team" variant="warning" size="lg" className="fw-bold">
               Meet the Team
             </Button>
             <Button as={Link} to="/matches" variant="outline-light" size="lg" className="fw-bold">
@@ -265,8 +265,8 @@ function Home() {
                   </p>
                 </Col>
                 <Col md={5} className="d-flex align-items-center justify-content-md-end mt-4 mt-md-0">
-                  <div>
-                    <Button as={Link} to="/sponsorship" variant="warning" size="lg" className="me-3 fw-bold">
+                  <div className="home-cta-buttons">
+                    <Button as={Link} to="/sponsorship" variant="warning" size="lg" className="fw-bold">
                       Become a Sponsor
                     </Button>
                     <Button as={Link} to="/contact" variant="outline-light" size="lg">

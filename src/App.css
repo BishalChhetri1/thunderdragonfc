@@ -140,6 +140,13 @@ a:hover {
   font-size: 1.15rem;
 }
 
+.hero-cta-buttons,
+.home-cta-buttons {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
 .stat-card {
   border-radius: 16px;
   border: 1px solid var(--border-soft);
@@ -419,6 +426,20 @@ a:hover {
 
   .fixture-name-short {
     display: inline;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-cta-buttons,
+  .home-cta-buttons {
+    display: flex;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .hero-cta-buttons .btn,
+  .home-cta-buttons .btn {
+    width: 100%;
   }
 }
 
