@@ -1,7 +1,8 @@
 import React from 'react';
-import { Container, Accordion } from 'react-bootstrap';
+import { Container, Accordion, Row, Col, Card } from 'react-bootstrap';
 import { matches } from '../data/matches';
 import ThunderDragonLogo from '../Images/ThunderDragonFC.jpg';
+import { leagueTable } from '../data/clubContent';
 
 function Matches() {
   const allMatches = [...matches].sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -51,7 +52,37 @@ function Matches() {
     <div className="min-vh-content">
       <section className="page-section">
         <Container>
-          <h1 className="section-title">Matches</h1>
+          <h1 className="section-title text-center">Fixtures & Results</h1>
+          <p className="section-subtitle">
+            Full schedule, results, and current form across league and tournament competitions.
+          </p>
+
+          <Row className="g-4 mb-4">
+            <Col md={4}>
+              <Card className="brand-card h-100">
+                <Card.Body className="text-center">
+                  <Card.Title className="h6 text-uppercase text-muted">Total Matches</Card.Title>
+                  <div className="stat-value">{allMatches.length}</div>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={4}>
+              <Card className="brand-card h-100">
+                <Card.Body className="text-center">
+                  <Card.Title className="h6 text-uppercase text-muted">Upcoming Fixtures</Card.Title>
+                  <div className="stat-value">{allMatches.filter((m) => m.type === 'upcoming').length}</div>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={4}>
+              <Card className="brand-card h-100">
+                <Card.Body className="text-center">
+                  <Card.Title className="h6 text-uppercase text-muted">Current League Position</Card.Title>
+                  <div className="stat-value">#{leagueTable.find((row) => row.team === 'Thunder Dragon FC')?.pos || '-'}</div>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
 
           <Accordion defaultActiveKey={leagueOrder[0]} className="matches-accordion">
             {leagueOrder.map((league, index) => {

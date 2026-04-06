@@ -14,14 +14,14 @@ function Navbar() {
       expand="lg"
       sticky="top"
       expanded={expanded}
+      className="club-navbar"
     >
       <Container>
-        <BootstrapNavbar.Brand as={Link} to="/">
+        <BootstrapNavbar.Brand as={Link} to="/" className="club-brand">
           <img
             src={headerLogo}
             alt="Thunder Dragon FC Logo"
-            className="me-2"
-            style={{ height: '36px', width: '36px', objectFit: 'cover', borderRadius: '50%' }}
+            className="me-2 nav-logo"
           />
           Thunder Dragon FC
         </BootstrapNavbar.Brand>
@@ -36,6 +36,7 @@ function Navbar() {
               to="/"
               active={location.pathname === '/'}
               onClick={() => setExpanded(false)}
+              className="club-nav-link"
             >
               Home
             </Nav.Link>
@@ -44,6 +45,7 @@ function Navbar() {
               to="/team"
               active={location.pathname === '/team'}
               onClick={() => setExpanded(false)}
+              className="club-nav-link"
             >
               Team
             </Nav.Link>
@@ -52,6 +54,7 @@ function Navbar() {
               to="/matches"
               active={location.pathname === '/matches'}
               onClick={() => setExpanded(false)}
+              className="club-nav-link"
             >
               Matches
             </Nav.Link>
@@ -60,6 +63,7 @@ function Navbar() {
               to="/sponsorship"
               active={location.pathname === '/sponsorship'}
               onClick={() => setExpanded(false)}
+              className="club-nav-link"
             >
               Sponsorship
             </Nav.Link>
@@ -68,6 +72,7 @@ function Navbar() {
               to="/contact"
               active={location.pathname === '/contact'}
               onClick={() => setExpanded(false)}
+              className="club-nav-link"
             >
               Contact
             </Nav.Link>

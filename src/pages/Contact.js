@@ -35,11 +35,14 @@ function Contact() {
     <div className="min-vh-content">
       <section className="page-section contact-section">
         <Container>
-          <h1 className="section-title">Contact Us</h1>
+          <h1 className="section-title text-center">Contact Us</h1>
+          <p className="section-subtitle">
+            Reach out for partnership enquiries, fixtures, and community activities. We aim to respond within 48 hours.
+          </p>
 
           <Row className="align-items-stretch">
             <Col md={8} className="mb-4">
-              <Card className="contact-main-card">
+              <Card className="contact-main-card brand-card">
                 <Card.Body className="p-4">
                   <Card.Title className="h3 mb-4">Send us a Message</Card.Title>
 
@@ -99,7 +102,7 @@ function Contact() {
                       />
                     </Form.Group>
 
-                    <Button variant="primary" type="submit" size="lg">
+                    <Button variant="danger" type="submit" size="lg" className="fw-bold">
                       Send Message
                     </Button>
                   </Form>
@@ -108,7 +111,7 @@ function Contact() {
             </Col>
 
             <Col md={4}>
-              <Card className="mb-4 contact-side-card">
+              <Card className="mb-4 contact-side-card brand-card">
                 <Card.Body>
                   <Card.Title className="h5 mb-3">Contact Information</Card.Title>
                   <Card.Text>
@@ -127,7 +130,7 @@ function Contact() {
                 </Card.Body>
               </Card>
 
-              <Card className="contact-side-card">
+              <Card className="contact-side-card brand-card">
                 <Card.Body>
                   <Card.Title className="h5 mb-3">Follow Us</Card.Title>
                   <Card.Text>
@@ -140,7 +143,7 @@ function Contact() {
                 </Card.Body>
               </Card>
 
-              <Card className="mt-4 contact-side-card">
+              <Card className="mt-4 contact-side-card brand-card">
                 <Card.Body>
                   <Card.Title className="h5 mb-3">Training Schedule</Card.Title>
                   <Card.Text>

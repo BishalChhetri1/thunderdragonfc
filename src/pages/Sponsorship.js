@@ -8,12 +8,15 @@ function Sponsorship() {
     <div className="min-vh-content">
       <section className="page-section sponsorship-section">
         <Container>
-          <h1 className="section-title">Sponsorship</h1>
+          <h1 className="section-title text-center">Sponsorship</h1>
+          <p className="section-subtitle">
+            Partner with Thunder Dragon FC and grow your brand with us.
+          </p>
           
           {/* Sponsorship Opportunities */}
           <Row className="mb-5">
             <Col md={8} className="mx-auto">
-              <Card className="mb-4">
+              <Card className="mb-4 brand-card">
                 <Card.Body className="p-5">
                   <Card.Title className="h3 mb-4">Partner With Us</Card.Title>
                   <Card.Text className="lead mb-4">
@@ -31,7 +34,7 @@ function Sponsorship() {
                     <li>Supporting local sports and community development</li>
                   </ul>
                   <div className="mt-4">
-                    <Button as={Link} to="/contact" variant="primary" size="lg">
+                    <Button as={Link} to="/contact" variant="danger" size="lg" className="fw-bold">
                       Contact Us About Sponsorship
                     </Button>
                   </div>
@@ -45,7 +48,7 @@ function Sponsorship() {
 
           {sponsors.map(sponsor => (
             <div key={sponsor.id} className="sponsor-card-wrapper">
-              <Card className="shadow-sm border-0 sponsor-card">
+              <Card className="shadow-sm border-0 sponsor-card brand-card">
                 <Row className="g-0 align-items-center">
                   {sponsor.logo && (
                     <Col md={4} className="text-center p-4">
@@ -73,7 +76,7 @@ function Sponsorship() {
           {sponsors.length === 0 && (
             <div className="text-center py-5">
               <p className="text-muted">We're looking for sponsors! Contact us to learn more.</p>
-              <Button as={Link} to="/contact" variant="primary" className="mt-3">
+              <Button as={Link} to="/contact" variant="danger" className="mt-3">
                 Get in Touch
               </Button>
             </div>
