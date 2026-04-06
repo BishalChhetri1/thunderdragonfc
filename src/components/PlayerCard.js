@@ -18,7 +18,6 @@ function PlayerCard({ player }) {
         <Card.Subtitle className="mb-2 text-muted text-uppercase small">
           {player.position}
         </Card.Subtitle>
-        <Card.Text className="small text-muted mb-0">{player.bio}</Card.Text>
       </Card.Body>
     </Card>
   );

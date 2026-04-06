@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Button, Card, Table } from 'react-bootstrap';
 import { matches } from '../data/matches';
-import { clubStats, latestNews, leagueTable, clubPrinciples } from '../data/clubContent';
+import { clubStats, latestNews, leagueTable } from '../data/clubContent';
 import TeamPhoto1 from '../Images/TeamPhoto1.jpg';
 import TeamPhoto2 from '../Images/TeamPhoto2.jpg';
 import TeamPhoto3 from '../Images/TeamPhoto3.jpg';

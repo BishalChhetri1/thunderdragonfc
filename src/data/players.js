@@ -20,7 +20,6 @@ export const players = [
     name: 'Ashish Manger',
     position: 'Goalkeeper',
     number: 1,
-    bio: 'Experienced goalkeeper with excellent reflexes and diving skills.',
     image: Player1
   },
   {
@@ -28,7 +27,6 @@ export const players = [
     name: 'Abishek Chhetri',
     position: 'Defender',
     number: 2,
-    bio: 'Solid defender known for tactical awareness and interception skills.',
     image: Player2
   },
   {
@@ -36,7 +34,6 @@ export const players = [
     name: 'Jiwan Rai',
     position: 'Midfielder',
     number: 4,
-    bio: 'Box-to-box midfielder known for work rate and goal-scoring ability.',
     image: Player4
   },
   {
@@ -44,7 +41,6 @@ export const players = [
     name: 'Samir Bhattarai',
     position: 'Defender',
     number: 5,
-    bio: 'Reliable defender with good positioning and aerial ability. Double leg tackle specialist.',
     image: Player5
   },
   {
@@ -52,7 +48,6 @@ export const players = [
     name: 'Unmol Chhetri',
     position: 'Midfielder',
     number: 6,
-    bio: 'Hardworking midfielder who provides balance to the team.',
     image: Player6
   },
   {
@@ -60,7 +55,6 @@ export const players = [
     name: 'Sajan Chhetri',
     position: 'Forward',
     number: 7,
-    bio: 'Clinical forward known for work rate and goal-scoring ability.',
     image: Player7
   },
   {
@@ -68,7 +62,6 @@ export const players = [
     name: 'Roman Rai',
     position: 'Midfielder',
     number: 8,
-    bio: 'Playmaker with exceptional dribbling skills and creativity.',
     image: Player8
   },
   {
@@ -76,7 +69,6 @@ export const players = [
     name: 'Bibeak Rai',
     position: 'Forward',
     number: 9,
-    bio: 'Attacking forward with great aerial ability and goal-scoring ability.',
     image: Player9
   },
   {
@@ -84,7 +76,6 @@ export const players = [
     name: 'Bhim Chhetri',
     position: 'Forward',
     number: 11,
-    bio: 'Fast winger who loves to take on defenders and create chances.',
     image: Player11
   },
   {
@@ -92,7 +83,6 @@ export const players = [
     name: 'Bishal Chhetri',
     position: 'Midfielder',
     number: 12,
-    bio: 'Creative midfielder with excellent passing and vision.',
     image: Player12
   },
   {
@@ -100,7 +90,6 @@ export const players = [
     name: 'Dhan Rai',
     position: 'Defender',
     number: 13,
-    bio: 'Strong experienced defender specialising in aerial duels and tackling.',
     image: Player13
   },
   {
@@ -108,7 +97,6 @@ export const players = [
     name: 'Bebash Gurung',
     position: 'Defender',
     number: 14,
-    bio: 'Reliable defender with good positioning and defensive instincts.',
     image: Player14
   },
   {
@@ -116,7 +104,6 @@ export const players = [
     name: 'Sabin Rai',
     position: 'Defender',
     number: 16,
-    bio: 'left back who loves to get forward and create chances.',
     image: Player16
   },
   {
@@ -124,7 +111,6 @@ export const players = [
     name: 'Tek Rai',
     position: 'Defender',
     number: 17,
-    bio: 'Experienced defender with strong defensive instincts. Usian bolt comparable speed.',
     image: Player17
   },
   {
@@ -132,7 +118,6 @@ export const players = [
     name: 'Bhu Whan',
     position: 'Midfielder',
     number: 20,
-    bio: 'Experienced midfielder with skills and passing ability.', 
     image: Player20
   },
 ];
