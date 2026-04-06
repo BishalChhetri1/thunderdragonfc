@@ -39,8 +39,3 @@ export const leagueTable = [
   { pos: 0, team: "Royale FC", played: 0, points: 0, gd: 0 }
 ];
 
-export const clubPrinciples = [
-  "Professional standards in training, matchday preparation, and player conduct.",
-  "Community-first mindset through inclusion, representation, and mentorship.",
-  "A winning mentality built on discipline, teamwork, and continuous improvement."
-];
