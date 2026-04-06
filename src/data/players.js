@@ -1,18 +1,18 @@
-import Player1 from '../Images/Player1.jpg';
-import Player2 from '../Images/Player2.jpg';
-import Player4 from '../Images/Player4.jpg';
-import Player5 from '../Images/Player5.jpg';
-import Player6 from '../Images/Player6.jpg';
-import Player7 from '../Images/Player7.jpg';
-import Player8 from '../Images/Player8.jpg';
-import Player9 from '../Images/Player9.jpg';
-import Player11 from '../Images/Player11.jpg';
-import Player12 from '../Images/Player12.jpg';
-import Player13 from '../Images/Player13.jpg';
-import Player14 from '../Images/Player14.jpg';
-import Player16 from '../Images/Player16.jpeg';
-import Player17 from '../Images/Player17.jpg';
-import Player20 from '../Images/Player20.jpg';
+import Player1 from '../Images/Player1.webp';
+import Player2 from '../Images/Player2.webp';
+import Player4 from '../Images/Player4.webp';
+import Player5 from '../Images/Player5.webp';
+import Player6 from '../Images/Player6.webp';
+import Player7 from '../Images/Player7.webp';
+import Player8 from '../Images/Player8.webp';
+import Player9 from '../Images/Player9.webp';
+import Player11 from '../Images/Player11.webp';
+import Player12 from '../Images/Player12.webp';
+import Player13 from '../Images/Player13.webp';
+import Player14 from '../Images/Player14.webp';
+import Player16 from '../Images/Player16.webp';
+import Player17 from '../Images/Player17.webp';
+import Player20 from '../Images/Player20.webp';
 
 export const players = [
   {
